@@ -1,0 +1,26 @@
+<div>
+    <a class="btn btn secondary" href="#!/templates">Go Back</a>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mainImageContainer">
+                <img class="mainImage" src="img/{{mainImage}}">
+            </div>
+            <div class="allImages">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="image in template.images">
+                        <img class="detailsImage" ng-src="/img/{{image}}" ng-click="setImage(image)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 details">
+            <h3>{{template.name}}</h3>
+            <p>{{template.description}}</p>
+            <p>{{template.type}}</p>
+            <h4>{{template.price | currency}}</h4>
+            <button class="btn-toolbar">BUY IT</button>
+        </div>
+    </div>
+</div>

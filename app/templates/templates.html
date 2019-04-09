@@ -1,1 +1,12 @@
-<p>This is the templates.</p>
+<div class="templates">
+    <div class="row" ng-repeat="y in data | groupBy:3">
+        <div class="col-md-4" ng-repeat="x in y">
+            <div class="aboveDetails">
+                <h3>{{x.name}}</h3>
+                <img ng-src="img/{{x.images.name}}">
+                <h4>{{x.price | currency}}</h4>
+            </div>
+            <a class="btn btn-primary btn-block" href="#!/templates/{{x.id}}">Details</a>
+        </div>
+    </div>
+</div>
